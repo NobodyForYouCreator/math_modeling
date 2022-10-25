@@ -1,11 +1,10 @@
 n = int(input())
-i=2
-multps = []
-while i<=n:
-    while n%i==0:
-        multps.append(str(int(i)))
-        n/=i
-    i+=1
-if n>1:
-    multps.append(str(int(n)))
-print(", ".join(set(multps)))
+nums = []
+for i in range(2, n+1):
+    s = 0
+    for j in range(1, int(i // 2) + 1):
+        if i % j == 0:
+            s += j
+    if s == i:
+        nums.append(i)
+print(nums)

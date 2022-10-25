@@ -1,0 +1,1 @@
+print("\n".join(" ".join(str(i*num) for i in range(1, 10)) for num in range(1, 10)))
